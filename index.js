@@ -50,3 +50,5 @@ fetch(dataUrl)
       container.appendChild(h2);
     }
   });
+
+console.log(1);

@@ -1,8 +1,3 @@
-const filename = window.location.pathname;
-const matches = filename.match(/\d+/g);
-const numbers = matches ? matches.map(Number)[0] : [];
-console.log(numbers);
-
 const dataUrl = "./data.json";
 
 function displayContent(data, container, propertyKeys, index) {
@@ -11,7 +6,7 @@ function displayContent(data, container, propertyKeys, index) {
   }
   const propertyKey = propertyKeys[index];
   const h4 = document.createElement("h4");
-  const binaryText = data[`${numbers}`]["내용"][propertyKey];
+  const binaryText = data[`${1}`]["내용"][propertyKey];
   let i = 0;
   const intervalId = setInterval(function () {
     h4.textContent += binaryText.charAt(i);
@@ -28,9 +23,9 @@ fetch(dataUrl)
   .then((response) => response.json())
   .then((data) => {
     const container = document.getElementById("container");
-    if (data[`${numbers}`]?.부제목) {
+    if (data[`${1}`]?.부제목) {
       const h2 = document.createElement("h2");
-      const binaryText = data[`${numbers}`]["부제목"]["2진법"];
+      const binaryText = data[`${1}`]["부제목"]["2진법"];
       let i = 0;
       const intervalId = setInterval(function () {
         h2.textContent += binaryText.charAt(i);
@@ -38,7 +33,7 @@ fetch(dataUrl)
         if (i === binaryText.length) {
           clearInterval(intervalId);
           const h3 = document.createElement("h3");
-          const text = data[`${numbers}`]["부제목"]["한글"];
+          const text = data[`${1}`]["부제목"]["한글"];
           container.appendChild(h3);
           let j = 0;
           const intervalId2 = setInterval(function () {
@@ -46,7 +41,7 @@ fetch(dataUrl)
             j++;
             if (j === text.length) {
               clearInterval(intervalId2);
-              const propertyKeys = Object.keys(data[`${numbers}`]["내용"]);
+              const propertyKeys = Object.keys(data[`${1}`]["내용"]);
               displayContent(data, container, propertyKeys, 0);
             }
           }, 50);

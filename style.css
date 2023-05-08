@@ -7,6 +7,7 @@ body {
   background-color: black;
   color: white;
   font-family: 'Courier New', Courier, monospace;
+  overflow-x: hidden;
 }
 
 
@@ -16,11 +17,62 @@ h2, h3 {
 
 
 #container {
-  width: 80%;
+  width: 70%;
   height: 80%;
   margin: 50px auto;
   border: 2px solid white;
   padding: 20px;
   line-height: 1.5;
   white-space: pre-wrap;
+  position: relative;
 }
+
+#container h4:last-child::after {
+  content: '|';
+  animation: blink 0.7s step-end infinite;
+}
+
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+#container button {
+  position: fixed;
+  top: 50%;
+  margin-top: -25px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+#container .left{
+  left: 0;
+  content: "<";
+}
+
+#container .right{
+  right: 0;
+  content: ">";
+}
+
+.binary-text {
+  white-space: pre-wrap;
+  width: 100%;
+  word-wrap: break-word;
+  
+}
+

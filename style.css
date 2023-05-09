@@ -11,12 +11,12 @@ body {
 }
 
 
-h2, h3 {
+/* h2, h3 {
   white-space: pre-wrap;
   width: 100%;
   word-wrap: break-word;
   margin: 0;
-}
+} */
 
 
 #container {

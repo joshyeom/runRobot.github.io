@@ -1,7 +1,8 @@
 const dataUrl = "./data.json";
 const currentUrl = window.location.href;
-const regex = new RegExp("(?<=index)[<>]?\\d+");
-const currentPage = parseInt(currentUrl.match(regex)[0]);
+const regex = new RegExp("(?<=index)[<>]?d+");
+const currentPageMatch = currentUrl.match(regex);
+const currentPage = currentPageMatch ? parseInt(currentPageMatch[0]) : 1;
 
 function displayContent(data, container, propertyKeys, index) {
   if (index >= propertyKeys.length) {
@@ -77,6 +78,7 @@ beforeButton.addEventListener("click", handlePage);
 nextButton.addEventListener("click", handlePage);
 
 function handlePage(e) {
+  e.preventDefault(); // 기본 동작 취소
   if (e.target.classList.contains("left")) {
     if (currentPage === 1) {
       return;
@@ -89,4 +91,3 @@ function handlePage(e) {
     window.location.href = `./index${currentPage + 1}.html`;
   }
 }
-// JSON변환기; //

@@ -2,7 +2,9 @@ const dataUrl = "./data.json";
 const currentUrl = window.location.href;
 const regex = /index[<>]?d+/;
 const currentPageMatch = currentUrl.match(regex);
-const currentPage = currentPageMatch ? parseInt(currentPageMatch[0]) : 1;
+const currentPage = currentPageMatch
+  ? parseInt(currentPageMatch[0].slice(5))
+  : 1;
 
 function displayContent(data, container, propertyKeys, index) {
   if (index >= propertyKeys.length) {
@@ -77,17 +79,11 @@ const nextButton = document.querySelector(".right");
 beforeButton.addEventListener("click", handlePage);
 nextButton.addEventListener("click", handlePage);
 
-function handlePage(e) {
-  e.preventDefault(); // 기본 동작 취소
-  if (e.target.classList.contains("left")) {
-    if (currentPage === 1) {
-      return;
-    }
-    window.location.href = `./index${currentPage - 1}.html`;
-  } else {
-    if (currentPage === 180) {
-      return;
-    }
-    window.location.href = `./index${currentPage + 1}.html`;
+function handlePage(event) {
+  const currentDirection = event.target.classList.contains("left") ? -1 : 1;
+  const newPage = currentPage + currentDirection;
+  if (newPage < 1 || newPage > 3) {
+    return;
   }
+  window.location.href = `./index${newPage}.html`;
 }

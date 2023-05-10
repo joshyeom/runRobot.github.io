@@ -1,6 +1,6 @@
 const dataUrl = "./data.json";
 const currentUrl = window.location.href;
-const regex = new RegExp("(?<=index)[<>]?d+");
+const regex = /index[<>]?d+/;
 const currentPageMatch = currentUrl.match(regex);
 const currentPage = currentPageMatch ? parseInt(currentPageMatch[0]) : 1;
 
@@ -38,7 +38,7 @@ xhr.onload = function () {
   if (xhr.status === 200) {
     const data = JSON.parse(xhr.responseText);
     const container = document.getElementById("container");
-    if (data[`${currentPage}`]?.부제목) {
+    if (data[`${currentPage}`] && data[`${currentPage}`]["부제목"]) {
       const h2 = document.createElement("h2");
       const binaryText = parseInt(
         data[`${currentPage}`]["부제목"]["영어"].replace(/[^\w\s"']/g, ""),

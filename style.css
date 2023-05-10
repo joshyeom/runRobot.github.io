@@ -17,12 +17,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   background: transparent;
 }
 
-* {
-  -webkit-user-select: none;  /* Chrome, Safari 브라우저에서만 동작 */
-  -moz-user-select: none;     /* Firefox 브라우저에서만 동작 */
-  -ms-user-select: none;      /* IE 10+ 브라우저에서만 동작 */
-  user-select: none;          /* 다양한 브라우저에서 동작 */
-}
 
 .typing {
   opacity: 0;

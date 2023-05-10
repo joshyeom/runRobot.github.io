@@ -31,20 +31,11 @@ function displayContent(data, container, propertyKeys, index) {
   container.appendChild(h4);
 }
 
-fetch(dataUrl)
-  .then((response) => response.json())
-  .then((data) => {
-    // const newObj = {};
-    // for (const key in data["1"]["내용"]) {
-    //   if (key % 2 !== 0) {
-    //     const value = data["1"]["내용"][key].replace(/\\/g, ""); // escape 문자열 제거
-    //     const binary = parseInt(value, 36).toString(2);
-    //     if (!isNaN(binary)) {
-    //       newObj[key] = binary;
-    //     }
-    //   }
-    // }
-
+const xhr = new XMLHttpRequest();
+xhr.open("GET", dataUrl, true);
+xhr.onload = function () {
+  if (xhr.status === 200) {
+    const data = JSON.parse(xhr.responseText);
     const container = document.getElementById("container");
     if (data[`${currentPage}`]?.부제목) {
       const h2 = document.createElement("h2");
@@ -75,7 +66,9 @@ fetch(dataUrl)
       }, 50);
       container.appendChild(h2);
     }
-  });
+  }
+};
+xhr.send();
 
 const beforeButton = document.querySelector(".left");
 const nextButton = document.querySelector(".right");

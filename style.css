@@ -17,19 +17,66 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   background: transparent;
 }
 
-
 .typing {
   opacity: 0;
 }
 
+
 body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Roboto Mono', monospace;  
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 500%;
   width: 100vw;
   background-color: black;
   color: white;
-  font-family: 'Courier New', Courier, monospace;
   overflow-x: hidden;
 }
 
+nav{
+  position: fixed;
+  top: 0;
+  background-color: #423937;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 3vh;
+  padding: 0 1rem;
+}
+nav:after{
+  content: '';
+  width: 4.5rem;
+}
+
+.circleButtons{
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.navTitle{
+  font-size: 0.8rem;
+}
+
+
+.circle{
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 100%;
+}
+
+.red{
+  background: #EC6A5E;;
+}
+.yellow{
+  background: #F4BF4F;
+}
+.green{
+  background: #61C554;
+}
 
 h2 {
   white-space: pre-wrap;
@@ -43,12 +90,9 @@ h2 {
 #container {
   width: 70%;
   height: 80%;
-  margin: 50px auto;
-  border: 2px solid white;
+  margin: 3rem auto;
   padding: 20px;
   line-height: 1.5;
-  white-space: pre-wrap;
-  position: relative;
 }
 
 #container h4:last-child::after {
@@ -66,10 +110,7 @@ h2 {
   }
 }
 
-#container button {
-  position: fixed;
-  top: 50%;
-  margin-top: -25px;
+button {
   width: 50px;
   height: 50px;
   border: none;
@@ -83,12 +124,12 @@ h2 {
   z-index: 2;
 }
 
-#container .left{
+.left{
   left: 0;
   content: "<";
 }
 
-#container .right{
+.right{
   right: 0;
   content: ">";
 }
@@ -104,4 +145,31 @@ h2 {
   overflow-wrap: break-word;
   width: 100%;
   word-wrap: break-word;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  background-color: black;
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+}
+
+input{
+  border: none;
+  border: solid 4px #999;
+  border-radius: 10px;
+  background-color: white;
+  width: 1.4rem;
+  height: 1.4rem;
+  text-align: center;
+}
+
+input::placeholder {
+  color: black;
+  font-size: 1rem;
 }

@@ -2,7 +2,37 @@ const dataUrl = "./data.json";
 const currentUrl = window.location.href;
 const regex = /index(\d+)\.html/;
 const currentPageMatch = currentUrl.match(regex);
-let currentPage = currentPageMatch ? parseInt(currentPageMatch[0].slice(5)) : 1;
+let currentPage = currentPageMatch ? parseInt(currentPageMatch[1]) : 1;
+const container = document.getElementById("container");
+const pageCountForm = document.querySelector(".pageCount");
+let nowPageInput = document.querySelector(".nowPage");
+nowPageInput.setAttribute("placeholder", `${currentPage}`);
+
+pageCountForm.addEventListener("submit", function (event) {
+  event.preventDefault(); // 폼 전송 이벤트 기본 동작 방지
+  const inputPage = parseInt(nowPageInput.value);
+  if (isNaN(inputPage) || inputPage < 1 || inputPage > 17) {
+    alert("1부터 17까지의 페이지 번호만 입력해주세요.");
+    return;
+  }
+  if (inputPage !== currentPage) {
+    handlePage(inputPage);
+  }
+});
+
+nowPageInput.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault(); // 폼 전송 기본 동작 방지
+    const inputPage = parseInt(nowPageInput.value);
+    if (isNaN(inputPage) || inputPage < 1 || inputPage > 17) {
+      alert("1부터 17까지의 페이지 번호만 입력해주세요.");
+      return;
+    }
+    if (inputPage !== currentPage) {
+      handlePage(inputPage);
+    }
+  }
+});
 
 function displayContent(data, container, propertyKeys, index) {
   if (index >= propertyKeys.length) {
@@ -37,13 +67,13 @@ xhr.open("GET", dataUrl, true);
 xhr.onload = function () {
   if (xhr.status === 200) {
     const data = JSON.parse(xhr.responseText);
-    const container = document.getElementById("container");
     if (data[`${currentPage}`] && data[`${currentPage}`]["부제목"]) {
       const h2 = document.createElement("h2");
-      const binaryText = parseInt(
-        data[`${currentPage}`]["부제목"]["영어"].replace(/[^\w\s"']/g, ""),
-        36
-      ).toString(2);
+      const binaryText = data[`${currentPage}`]["부제목"]["영어"]
+        .replace(/[^\w\s]/gi, "")
+        .split(" ")
+        .map((word) => parseInt(word, 36).toString(2).padStart(8, "0"))
+        .join("");
       let i = 0;
       const intervalId = setInterval(function () {
         h2.textContent += binaryText.charAt(i);
@@ -75,33 +105,40 @@ const beforeButton = document.querySelector(".left");
 const nextButton = document.querySelector(".right");
 
 if (currentPage === 1) {
-  beforeButton.style.display = "none";
-} else if (currentPage === 3) {
-  nextButton.style.display = "none";
+  beforeButton.innerHTML = "";
+} else if (currentPage === 17) {
+  nextButton.innerHTML = "";
 }
 
-beforeButton.addEventListener("click", function () {
-  handlePage(-1);
-});
-nextButton.addEventListener("click", function () {
-  handlePage(1);
+beforeButton.addEventListener("click", function (event) {
+  event.preventDefault();
+  handlePage(currentPage - 1); // 이전 페이지로 이동
 });
 
-function handlePage(direction) {
-  const newPage = currentPage + direction;
-  if (newPage < 1 || newPage > 3) {
+nextButton.addEventListener("click", function (event) {
+  event.preventDefault();
+  handlePage(currentPage + 1); // 다음 페이지로 이동
+});
+
+function handlePage(pageNumber) {
+  if (pageNumber < 1 || pageNumber > 17 || pageNumber === currentPage) {
     return;
   }
 
-  // 현재 페이지의 URL에서 숫자 부분을 추출
-  const regex = /index([0-9]+)\.html/;
-  const match = window.location.href.match(regex);
-  const currentPageNumber = match ? parseInt(match[1]) : 1;
-
   // 다음 페이지의 URL 생성
-  const nextPageNumber = currentPageNumber + direction;
-  const nextPageUrl = `./index${nextPageNumber}.html`;
+  const nextPageUrl = `./index${pageNumber}.html`;
 
   window.location.href = nextPageUrl;
-  currentPage = newPage; // currentPage 업데이트
 }
+
+function scrollToBottom() {
+  const isAtBottom =
+    window.innerHeight + window.pageYOffset >= document.body.scrollHeight;
+
+  if (!isAtBottom) {
+    return;
+  } else {
+    window.scrollTo(0, document.body.scrollHeight);
+  }
+}
+setInterval(scrollToBottom, 100);

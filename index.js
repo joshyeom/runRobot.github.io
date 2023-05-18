@@ -34,6 +34,14 @@ nowPageInput.addEventListener("keydown", function (event) {
   }
 });
 
+nowPageInput.addEventListener("focus", function () {
+  nowPageInput.removeAttribute("placeholder");
+});
+
+nowPageInput.addEventListener("blur", function () {
+  nowPageInput.setAttribute("placeholder", currentPage);
+});
+
 function displayContent(data, container, propertyKeys, index) {
   if (index >= propertyKeys.length) {
     return;

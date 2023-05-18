@@ -179,6 +179,7 @@ input{
   width: 1.4rem;
   height: 1.4rem;
   text-align: center;
+  touch-action: manipulation;
 }
 
 input::placeholder {

@@ -49,7 +49,13 @@ function displayContent(data, container, propertyKeys, index) {
       : data[`${currentPage}`]["내용"][propertyKeys[index]];
 
   const h4 = document.createElement("h4");
-  h4.classList.add("binary-text"); // 클래스 추가
+  if (index % 2 !== 0) {
+    h4.classList.add("binary-text");
+    h4.classList.add("jejugothic");
+  } else {
+    h4.classList.add("binary-text");
+    h4.classList.add("mono");
+  }
   let i = 0;
   const intervalId = setInterval(function () {
     h4.textContent += binaryText.charAt(i);
@@ -69,6 +75,7 @@ xhr.onload = function () {
     const data = JSON.parse(xhr.responseText);
     if (data[`${currentPage}`] && data[`${currentPage}`]["부제목"]) {
       const h2 = document.createElement("h2");
+      h2.classList.add("mono");
       const binaryText = data[`${currentPage}`]["부제목"]["영어"]
         .replace(/[^\w\s]/gi, "")
         .split(" ")
@@ -81,6 +88,7 @@ xhr.onload = function () {
         if (i === binaryText.length) {
           clearInterval(intervalId);
           const h2 = document.createElement("h2");
+          h2.classList.add("jejugothic");
           const text = data[`${currentPage}`]["부제목"]["한글"];
           container.appendChild(h2);
           let j = 0;

@@ -1,3 +1,6 @@
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+
+
 /* Reset CSS */
 html, body, div, span, applet, object, iframe,
 h1, h5, h6, p, blockquote, pre,
@@ -17,18 +20,27 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   background: transparent;
 }
 
+
+.jejugothic {
+  font-family: 'Jeju Gothic', sans-serif;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.mono {
+  font-family: 'Roboto Mono', monospace; 
+  line-height: 150%;
+  font-weight: 400;
+}
+
+
 .typing {
   opacity: 0;
 }
 
 
 body {
-  font-family: 'Noto Sans KR', sans-serif;
-  font-family: 'Roboto Mono', monospace;  
-  font-style: normal;
-  font-weight: 700;
   font-size: 1rem;
-  line-height: 500%;
   width: 100vw;
   background-color: black;
   color: white;
@@ -173,3 +185,4 @@ input::placeholder {
   color: black;
   font-size: 1rem;
 }
+

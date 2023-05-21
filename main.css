@@ -1,0 +1,64 @@
+/* Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+
+body {
+    font-size: 1rem;
+    width: 100%;
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+    user-zoom: fixed;
+  }
+  
+  #container {
+    width: 100%;
+    line-height: 1.5;
+}
+
+.pre-style-1 {
+    font-size: 0.46rem;
+    padding-top: 5rem;
+  }
+  
+  .pre-style-2 {
+      padding-left: 1.3rem;
+      font-size: 0.2rem;
+    }
+    
+.pre-style-3 {
+    font-size: 0.5rem;
+    padding-left: 1.5rem;
+    padding-top: 10rem;
+  }
+
+  #container pre:last-child::after {
+    content: '|';
+    animation: blink 0.7s step-end infinite;
+  }
+  
+  
+  @keyframes blink {
+    0%, 50% {
+      opacity: 1;
+    }
+    51%, 100% {
+      opacity: 0;
+    }
+  }

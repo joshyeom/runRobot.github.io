@@ -57,6 +57,10 @@ nav{
   width: 100vw;
   height: 3vh;
   padding: 0 1rem;
+  font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Roboto Mono', monospace;
+font-weight: 700;
+line-height: 180%;
 }
 nav:after{
   content: '';

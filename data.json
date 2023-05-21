@@ -913,7 +913,7 @@
             "71":"\"아버지와 어머니는 당신이 없어진 것을 알고 곧 가니메데의 경찰에 연락을 취했을 거여요. 이미 당신의 수색이 벌어지고 있을 것입니다.\"",
             "73":"I adjusted the antenna of the wireless receiver attached to my head to the wavelength of the Ganymede broadcasting station.",
             "75":"나는 머리에 붙어 있는 무선 수신기의 안테나를 가니메데 방송국의 파장에 맞추었다.",
-            "76":"Beep beep beep - beep beep.",
+            "76":"Beep beep beep beep beep.",
             "77":"삐삐삐-삐삐.",
             "78":"At first, there was noise, but it disappeared, and the announcer's voice flowed out.\"",
             "79":"처음에는 잡음이 들어오더니 그것이 없어지자, 아나운서의 소리가 흘러나왔다.",
@@ -1108,7 +1108,7 @@
         "161":"운이 좋게 도중에서 수색대를 만나지 않았으며, 무사히 가나폴리스의 마을에 도착했다.",
         "162":"The town looked like a larger version of San Valejo,",
         "163":"마을은 산발레이를 더 크게 한 것과 같았다.",
-        "164":", with a central office building covered by a transparent dome and rows of shops on the ground level, and people's homes in the underground area.",
+        "164":"with a central office building covered by a transparent dome and rows of shops on the ground level, and people's homes in the underground area.",
         "166":"지상에는 투명한 돔에 덮인 사무소며 가게의 건물이 줄을 이었고, 지하에는 사람들의 주택이 있었다.",
         "167":"Paul parked the car at the entrance of the dome.",
         "168":"폴은 차를 돔의 입구에 세웠다.",
@@ -1821,17 +1821,24 @@
             "225":"그 후 10여일의 여행이 계속된 끝에, 드라베라호는 겨우 화성 공항에 착륙했다.",
             "226":"\"There might be inspections by the Mars police, so stay hidden.\"",
             "227":"\"화성 경찰의 검사가 있을지도 모르니 숨어 있어요.\"",
-            "228":"After locking Paul's cabin, I went into the cockpit.",
+            "228":"After locking Paul's cabin, I went into the cockpit. However, the captain commanded me,",
             "229":"나는 폴의 선실을 굳게 잠근 다음, 조종실로 들어갔다. 그런데 선장은 나에게 이렇게 명령했다.",
+            "230":"\"Lex, summon Paul. There's an important matter to discuss.\"",
             "231":"\"렉스, 폴을 불러오너라. 중요한 이야기가 있다.\"",
-            "232":"그래서 나는 또 선실을 열고, 폴과 함께 조종실에 들어갔다.",
-            "233":"선장은 갑자기 돈 뭉치를 폴에게 내밀었다.",
-            "234":"\"돌려준다.\"",
-            "235":"\"예? 선장님은 돈이 필요 없으신 가요?\"",
-            "236":"\"응, 잠깐동안 빌었을 뿐이다. 나는 좋지 못한 일로 돈을 벌고 싶지는 않다. 너도 법을 지키고 바",
-            "237":"르게 사는 것을 배우지 않으면 안 된다.\"",
-            "238":"하며 선장은 폴과 나에게 말할 여유도 주지 않고 우주선의 입구를 열었다.",
-            "239":"그러자 녹색의 몸을 한 화성인의 경찰 두 사람이 우주선에 올라왔다"}
+            "232":"So, I opened the cabin once again and entered the control room with Paul.",
+            "233":"그래서 나는 또 선실을 열고, 폴과 함께 조종실에 들어갔다.",
+            "234":"Suddenly, the captain handed a bundle of money to Paul.",
+            "235":"선장은 갑자기 돈 뭉치를 폴에게 내밀었다.",
+            "236":"\"Give it back.\"",
+            "237":"\"돌려준다.\"",
+            "239":"\"What? Don't you need the money, Captain?\"",
+            "240":"\"예? 선장님은 돈이 필요 없으신 가요?\"",
+            "241":"\"Yeah, I just borrowed it for a while. I don't want to earn money through unethical means. You must learn to uphold the law and live righteously.\"",
+            "242":"\"응, 잠깐동안 빌었을 뿐이다. 나는 좋지 못한 일로 돈을 벌고 싶지는 않다. 너도 법을 지키고 바르게 사는 것을 배우지 않으면 안 된다.\"",
+            "243":"Without giving Paul and me any chance to speak, the captain opened the spacecraft's entrance.",
+            "244":"하며 선장은 폴과 나에게 말할 여유도 주지 않고 우주선의 입구를 열었다.",
+            "245":"Then, two Martian police officers with green bodies boarded the spaceship.",
+            "246":"그러자 녹색의 몸을 한 화성인의 경찰 두 사람이 우주선에 올라왔다"}
     },
     "12":{
         "부제목":{
@@ -2554,7 +2561,7 @@
     },
     "16":{
         "부제목":{
-            "영어":"See you again ",
+            "영어":"See you again",
             "한글": "다시 만나다"
         },
         "내용": {

@@ -17,10 +17,10 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   background: transparent;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 390px) {
 body {
     font-size: 1rem;
-    width: 100%;
+    width: 100vw;
     background-color: black;
     color: white;
     overflow-x: hidden;

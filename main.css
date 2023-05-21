@@ -46,6 +46,7 @@ body {
   .pre-style-2 {
     font-size: 0.25rem;
     padding-left: 0.5rem;
+    white-space: normal;
   }
   
   .pre-style-3 {
@@ -59,10 +60,3 @@ body {
     content: '|';
     animation: blink 0.7s step-end infinite;
   }
-  
-
-  @media (max-width: 767px) {
-    .pre-style-2 {
-        font-size: 0.4rem;
-    }
-}

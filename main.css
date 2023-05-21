@@ -38,7 +38,7 @@ body {
   
   .pre-style-1 {
     font-size: 0.5rem;
-    padding-left: 1rem;
+    padding-left: 0.5rem;
     margin-top: 5rem;
   }
 
@@ -50,7 +50,7 @@ body {
   
   .pre-style-3 {
     font-size: 0.53rem;
-    top: 17rem;
+    top: 15rem;
     margin-top: 15rem;
     padding-left: 0.8rem;
   }
@@ -60,3 +60,9 @@ body {
     animation: blink 0.7s step-end infinite;
   }
   
+
+  @media (max-width: 767px) {
+    .pre-style-2 {
+        font-size: 0.4rem;
+    }
+}

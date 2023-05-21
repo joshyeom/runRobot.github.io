@@ -45,20 +45,20 @@ body {
   }
   
   .pre-style-1 {
-    font-size: 0.5rem;
+    font-size: 0.3rem;
     position: absolute;
     left: 0;
   }
 
   
   .pre-style-2 {
-    font-size: 0.3rem;
+    font-size: 0.1rem;
     position: absolute;
     top: 6rem;
   }
   
   .pre-style-3 {
-    font-size: 0.55rem;
+    font-size: 0.35rem;
     position: absolute;
     top: 17rem;
   }

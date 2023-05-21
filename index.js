@@ -4,43 +4,8 @@ const regex = /index(\d+)\.html/;
 const currentPageMatch = currentUrl.match(regex);
 let currentPage = currentPageMatch ? parseInt(currentPageMatch[1]) : 1;
 const container = document.getElementById("container");
-const pageCountForm = document.querySelector(".pageCount");
-let nowPageInput = document.querySelector(".nowPage");
-nowPageInput.setAttribute("placeholder", `${currentPage}`);
-
-pageCountForm.addEventListener("submit", function (event) {
-  event.preventDefault(); // 폼 전송 이벤트 기본 동작 방지
-  const inputPage = parseInt(nowPageInput.value);
-  if (isNaN(inputPage) || inputPage < 1 || inputPage > 17) {
-    alert("1부터 17까지의 페이지 번호만 입력해주세요.");
-    return;
-  }
-  if (inputPage !== currentPage) {
-    handlePage(inputPage);
-  }
-});
-
-nowPageInput.addEventListener("keydown", function (event) {
-  if (event.key === "Enter") {
-    event.preventDefault(); // 폼 전송 기본 동작 방지
-    const inputPage = parseInt(nowPageInput.value);
-    if (isNaN(inputPage) || inputPage < 1 || inputPage > 17) {
-      alert("1부터 17까지의 페이지 번호만 입력해주세요.");
-      return;
-    }
-    if (inputPage !== currentPage) {
-      handlePage(inputPage);
-    }
-  }
-});
-
-nowPageInput.addEventListener("focus", function () {
-  nowPageInput.removeAttribute("placeholder");
-});
-
-nowPageInput.addEventListener("blur", function () {
-  nowPageInput.setAttribute("placeholder", currentPage);
-});
+const currentDiv = document.querySelector(".currentPage");
+currentDiv.innerHTML = currentPage;
 
 function displayContent(data, container, propertyKeys, index) {
   if (index >= propertyKeys.length) {

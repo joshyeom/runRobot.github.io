@@ -174,33 +174,3 @@ footer{
   z-index: 10;
   bottom: 0;
 }
-
-input{
-  border: none;
-  border: solid 4px #999;
-  border-radius: 10px;
-  background-color: white;
-  width: 1.4rem;
-  height: 1.4rem;
-  text-align: center;
-  touch-action: manipulation;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  user-select: none;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  -webkit-text-size-adjust: 100%;
-}
-
-input:focus {
-  zoom: 1;
-  touch-action: auto;
-}
-
-
-input::placeholder {
-  color: black;
-  font-size: 1rem;
-}
-

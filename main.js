@@ -1,6 +1,10 @@
 const dataUrl = "./asciiArt.json";
 const container = document.getElementById("container");
 
+document.getElementById("overlay").addEventListener("click", function () {
+  window.location.href = "index1.html"; // index1.html로 이동
+});
+
 function displayAsciiArt(asciiArt, className) {
   return new Promise((resolve) => {
     const pre = document.createElement("pre");

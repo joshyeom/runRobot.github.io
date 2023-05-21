@@ -41,21 +41,26 @@ body {
     margin: 3rem auto;
     padding: 20px;
     line-height: 1.5;
+    position: relative;
   }
   
   .pre-style-1 {
     font-size: 0.5rem;
-    padding-top: 3rem;
+    position: absolute;
+    left: 0;
   }
 
   
   .pre-style-2 {
     font-size: 0.3rem;
+    position: absolute;
+    top: 6rem;
   }
   
   .pre-style-3 {
     font-size: 0.55rem;
-    padding-top: 5rem;
+    position: absolute;
+    top: 17rem;
   }
   
   #container pre:last-child::after {

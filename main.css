@@ -17,7 +17,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   background: transparent;
 }
 
-
+@media (max-width: 767px) {
 body {
     font-size: 1rem;
     width: 100%;
@@ -62,3 +62,4 @@ body {
       opacity: 0;
     }
   }
+}

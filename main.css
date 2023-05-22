@@ -41,7 +41,8 @@ body {
 }
 
 .pre-style-2 {
-    font-size: 3px;
+    font-size: 0.3rem;
+    transform: scale(0.2);
 }
 
 .pre-style-3 {
@@ -49,4 +50,8 @@ body {
     top: 15rem;
     margin-top: 15rem;
     padding-left: 0.8rem;
+    -webkit-transform: scale(0.2);
+    -moz-transform: scale(0.2);
+    -ms-transform: scale(0.2);
+    transform: scale(0.2);
 }

@@ -38,15 +38,13 @@ body {
   
   .pre-style-1 {
     font-size: 0.5rem;
-    padding-left: 0.5rem;
     margin-top: 5rem;
   }
 
   
   .pre-style-2 {
-    font-size: 0.25rem;
     padding-left: 0.5rem;
-    white-space: normal;
+    font-size: 0.25rem !important;
   }
   
   .pre-style-3 {

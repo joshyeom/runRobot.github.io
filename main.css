@@ -41,11 +41,7 @@ body {
 }
 
 .pre-style-2 {
-    -webkit-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-    font-size: 5px;
+    font-size: 3px;
 }
 
 .pre-style-3 {

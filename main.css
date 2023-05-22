@@ -33,43 +33,40 @@ body {
     background-color: black;
     color: white;
     overflow-x: hidden;
-  }
+}
 
-  
-  .pre-style-1 {
+.pre-style-1 {
     font-size: 0.5rem;
     margin-top: 5rem;
-  }
+}
 
-  
-  .pre-style-2 {
+.pre-style-2 {
     padding-left: 0.5rem;
     font-size: 0.25rem !important;
-    -webkit-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-  }
-  
-  .pre-style-3 {
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+.pre-style-3 {
     font-size: 0.53rem;
     top: 15rem;
     margin-top: 15rem;
     padding-left: 0.8rem;
-  }
-  
-  #container pre:last-child::after {
+}
+
+#container pre:last-child::after {
     content: '|';
     animation: blink 0.7s step-end infinite;
-  }
+}
 
-
-@media only screen and (max-width: 767px) {
+@media only screen and (-webkit-min-device-pixel-ratio: 0) and (max-width: 767px) {
     .pre-style-2 {
         font-size: 0.4rem !important;
-        -webkit-text-size-adjust: 100%;
-        -moz-text-size-adjust: 100%;
-        -ms-text-size-adjust: 100%;
-        text-size-adjust: 100%;
+        -webkit-text-size-adjust: none;
+        -moz-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+        text-size-adjust: none;
     }
 }

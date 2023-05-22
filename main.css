@@ -41,12 +41,11 @@ body {
 }
 
 .pre-style-2 {
-    padding-left: 0.5rem;
-    font-size: 1px;
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     text-size-adjust: 100%;
+    font-size: 5px;
 }
 
 .pre-style-3 {

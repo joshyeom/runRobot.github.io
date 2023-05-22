@@ -41,17 +41,38 @@ body {
 }
 
 .pre-style-2 {
-    font-size: 0.3rem;
-    transform: scale(0.2);
+    font-size: 3px;
 }
 
 .pre-style-3 {
     font-size: 0.53rem;
     top: 15rem;
-    margin-top: 15rem;
     padding-left: 0.8rem;
-    -webkit-transform: scale(0.2);
-    -moz-transform: scale(0.2);
-    -ms-transform: scale(0.2);
-    transform: scale(0.2);
+}
+
+/* Cross-Browser Compatibility Fixes */
+
+/* Fix for vertical alignment issue */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Fix for font-size issue */
+pre, code {
+  font-family: monospace;
+}
+
+/* Fix for font-size issue in older browsers */
+pre {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Fix for positioning issue */
+.pre-style-3 {
+  position: relative;
 }

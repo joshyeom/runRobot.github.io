@@ -70,3 +70,12 @@ body {
         text-size-adjust: none;
     }
 }
+
+@media only screen and (max-width: 767px) {
+  /* 삼성 브라우저에서 적용되는 스타일 */
+  @supports (-webkit-touch-callout: none) {
+    .pre-style-2 {
+      font-size: 0.4rem !important;
+    }
+  }
+}

@@ -42,9 +42,13 @@ body {
   }
 
   
-  body .pre-style-2 {
+  .pre-style-2 {
+    padding-left: 0.5rem;
     font-size: 0.25rem !important;
-    -webkit-font-size: 0.25rem !important;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
   
   .pre-style-3 {
@@ -58,3 +62,14 @@ body {
     content: '|';
     animation: blink 0.7s step-end infinite;
   }
+
+
+@media only screen and (max-width: 767px) {
+    .pre-style-2 {
+        font-size: 0.4rem !important;
+        -webkit-text-size-adjust: 100%;
+        -moz-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+}

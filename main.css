@@ -17,44 +17,62 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   background: transparent;
 }
 
-/* Mobile-specific styles */
-@media (max-width: 768px) {
-  body {
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    overflow-x: hidden;
-  }
-
-  #overlay {
-    /* 변경된 스타일 */
-    background-color: rgba(0, 0, 0, 0.5);
-    /* 기타 필요한 스타일 설정 */
-  }
-
-  .pre-style-1 {
-    font-size: 1rem;
-    margin-top: 2rem;
-  }
-
-  .pre-style-2 {
-    font-size: 1.5rem;
-  }
-
-  .pre-style-3 {
-    font-size: 1rem;
-    top: 5rem;
-    padding-left: 0.4rem;
-  }
+    height: 100%;
+    z-index: 9999;
+    background-color: transparent;
+    cursor: pointer;
 }
 
-/* Common styles */
 body {
-  width: 100vw;
-  background-color: black;
-  color: white;
+    width: 100vw;
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
 }
 
+.pre-style-1 {
+    font-size: 0.5rem;
+    margin-top: 5rem;
+}
+
+.pre-style-2 {
+    font-size: 3px;
+}
+
+.pre-style-3 {
+    font-size: 0.53rem;
+    top: 15rem;
+    padding-left: 0.8rem;
+}
+
+/* Cross-Browser Compatibility Fixes */
+
+/* Fix for vertical alignment issue */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Fix for font-size issue */
+pre, code {
+  font-family: monospace;
+}
+
+/* Fix for font-size issue in older browsers */
 pre {
   white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
   word-wrap: break-word;
-  text-align: justify;
+}
+
+/* Fix for positioning issue */
+.pre-style-3 {
+  position: relative;
 }

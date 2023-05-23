@@ -47,13 +47,12 @@ body {
 }
 
 .pre-style-3 {
-    font-size: 6.5px;
+    font-size: 7px;
     top: 11rem;
-    padding-left: 0.8rem;
+    padding-left: 2rem;
     position: relative;
 }
 
-/* asdfasdf */
 /* Cross-Browser Compatibility Fixes */
 /* Fix for vertical alignment issue */
 table {

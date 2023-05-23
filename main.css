@@ -36,12 +36,14 @@ body {
 }
 
 .pre-style-1 {
-    font-size: 6px;
+    font-size: 7px;
     margin-top: 5rem;
+    margin-left: 10px;
 }
 
 .pre-style-2 {
     font-size: 3px;
+    margin-left: 10px;
 }
 
 .pre-style-3 {

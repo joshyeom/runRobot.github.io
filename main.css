@@ -49,30 +49,3 @@ body {
     top: 15rem;
     padding-left: 0.8rem;
 }
-
-/* Cross-Browser Compatibility Fixes */
-
-/* Fix for vertical alignment issue */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* Fix for font-size issue */
-pre, code {
-  font-family: monospace;
-}
-
-/* Fix for font-size issue in older browsers */
-pre {
-  white-space: pre-wrap;
-  white-space: -moz-pre-wrap;
-  white-space: -pre-wrap;
-  white-space: -o-pre-wrap;
-  word-wrap: break-word;
-}
-
-/* Fix for positioning issue */
-.pre-style-3 {
-  position: relative;
-}

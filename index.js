@@ -91,25 +91,18 @@ if (currentPage === 1) {
   nextButton.innerHTML = "";
 }
 
-beforeButton.addEventListener("click", function (event) {
-  event.preventDefault();
-  handlePage(currentPage - 1); // 이전 페이지로 이동
-});
+const $footer = document.querySelector("footer");
 
-nextButton.addEventListener("click", function (event) {
-  event.preventDefault();
-  handlePage(currentPage + 1); // 다음 페이지로 이동
-});
+$footer.addEventListener("click", pageHandler);
 
-function handlePage(pageNumber) {
-  if (pageNumber < 1 || pageNumber > 17 || pageNumber === currentPage) {
+function pageHandler({ target }) {
+  if (!target.classList.contains("right") && !target.classList.contains("left"))
     return;
-  }
 
-  // 다음 페이지의 URL 생성
-  const nextPageUrl = `./index${pageNumber}.html`;
-
-  window.location.href = nextPageUrl;
+  let nextPageUrl = target.classList.contains("right")
+    ? currentPage + 1
+    : currentPage - 1;
+  window.location.href = `./index${nextPageUrl}.html`;
 }
 
 function scrollToBottom() {
